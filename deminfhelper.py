@@ -96,6 +96,8 @@ def parse_args():
     #SFS
     parser.add_argument("--sfs", help = "to compute the sfs", action = "store_true")
     parser.add_argument("--sfs_transformed", help = "to normalize the sfs", action = "store_true")
+    parser.add_argument("--missing_individuals", help = "to filter the individuals above a missing data thresold", type=float, default=1.0)
+    parser.add_argument("--missing_sites", help = "to filter the sites above a missing data thresold", type=int, default=0)
     parser.add_argument("--plot_sfs", help = "to plot the sfs", action = "store_true")
     parser.add_argument("--percentile_cutoff", help="Percentile of SNPs distance below which SNPs are kept.",  type=int, default=90)
     #Stairwayplot2
